@@ -12,6 +12,9 @@ elif nivel == 3:
 print("Você escolheu o nível {}. Você tem {} tentativas!"
     .format(nivel, total_de_tentativas))
 
+pontos = 100
+print("Você possui {} pontos".format(pontos))
+
 numero_secreto = 40
 
 for rodada in range(1, total_de_tentativas + 1):
@@ -28,7 +31,12 @@ for rodada in range(1, total_de_tentativas + 1):
         break
     elif maior:
         print("Você errou! Seu chute foi maior que o número secreto")
+        pontos = pontos - abs(chute - numero_secreto)
+        print("Você está agora com {} pontos".format(pontos))
     elif menor:
         print("Você errou! Seu chute foi menor que o número secreto")
+        pontos = pontos - abs(chute - numero_secreto)
+        print("Você está agora com {} pontos".format(pontos))
 
+print("Você ficou com {} pontos".format(pontos))
 print("Fim do jogo!")
