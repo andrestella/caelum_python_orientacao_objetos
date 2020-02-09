@@ -2,8 +2,17 @@ print("*************************************")
 print("*        Jogo de Adivinhação        *")
 print("*************************************")
 
+nivel = int(input("Escolha o nível -  1, 2 ou 3: "))
+if nivel == 1:
+    total_de_tentativas = 20
+elif nivel == 2:
+    total_de_tentativas = 10
+elif nivel == 3:
+    total_de_tentativas = 5
+print("Você escolheu o nível {}. Você tem {} tentativas!"
+    .format(nivel, total_de_tentativas))
+
 numero_secreto = 40
-total_de_tentativas = 3
 
 for rodada in range(1, total_de_tentativas + 1):
     print("Tentativa {} de {}".format(rodada, total_de_tentativas))
